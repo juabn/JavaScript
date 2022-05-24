@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --lavander-blush: #FFF2F1;
+    --maximum-blue-purple: #A09BE7;
+    --purple:#D90368;
+    --rich-black-fogra-29: #01161E;
+    --medium-aquamarine: #61D095;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+    background-color: var(--lavander-blush);
+    height: 100vh;
+    padding: .1px;
+}
+
+.header_title{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 3rem auto;
+}
+
+.div_monitor{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--maximum-blue-purple);
+}
+
+.div_monitor:hover,
+.div_monitor:focus{
+    box-shadow: 0 0 5px var(--rich-black-fogra-29);
+    cursor: pointer;
+}
+
+.form_button{
+    padding:10px 15px;
+    font-size: 1.5rem;
+    background-color: var(--medium-aquamarine);
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    color: #01161E;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.form_button:hover,
+.form_button:focus{
+    background: lavenderblush;
+    color: #61D095;
+    border: 2px solid #61D095;
+}
+
+
