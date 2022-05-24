@@ -3,11 +3,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    --lavander-blush: #FFF2F1;
-    --maximum-blue-purple: #A09BE7;
-    --purple:#D90368;
+    --lavander-blush: #ec281a;
+    --maximum-blue-purple: #e3b536;
+    --purple:#278842;
     --rich-black-fogra-29: #01161E;
-    --medium-aquamarine: #61D095;
+    --medium-aquamarine: rgb(252, 15, 15);
     font-family: 'Montserrat', sans-serif;
 }
 
