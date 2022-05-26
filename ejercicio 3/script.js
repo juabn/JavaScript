@@ -61,7 +61,7 @@ function checkearDatos(){
         }
     }
     else if(alumnosInscritos.includes(nombreA) === false){
-        return alert('El nombre no esta ne la lista de inscritos');
+        return alert('El nombre no esta en la lista de inscritos');
     }
 
 }
