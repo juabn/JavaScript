@@ -1,0 +1,19 @@
+*{
+    color: #222;
+    font-family: sans-serif;
+    
+}
+
+div{
+    background: bisque;
+    padding: 20px;
+}
+
+
+/* p:active{
+    color: white;
+}
+
+p:hover{
+    background: green;
+} */

@@ -1,0 +1,32 @@
+.cont2{
+    padding: 50px;
+    background: red;
+}
+
+body{
+    /* height: 400vh; */
+}
+
+.cont1{
+    padding: 100px;
+    background: blue;
+}
+
+.prueba{
+    border: 2px solid green;
+    background-color: greenyellow;
+    width: 50%;
+    height: 4.5rem;
+    font-size: 4rem;
+    margin: 5rem auto;
+    display: block;
+    color: firebrick;
+}
+
+.prueba:focus,
+.prueba:active,
+.prueba:focus-within{
+    border: none;
+    outline: none;
+    border: 3px solid green;
+}

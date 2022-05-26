@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --space-cadet: hsla(235, 21%, 21%, 1);
+    --space-cadet-secondary: rgba(25, 27, 52, 0.315);
+    --manatee: hsla(218, 17%, 62%, 1);
+    --manatee-secondary: rgb(100, 136, 197);
+    --cultured: hsla(197, 24%, 94%, 1);
+    --imperial-red: hsla(353, 86%, 54%, 1);
+    --amaranth-red: hsla(350, 96%, 43%, 1);
+    --radius: 5px;
+    font-family: 'Inter', sans-serif;
+    color: var(--cultured);
+}
+
+body{
+    height: 83vh;
+    font-size: 1.2rem;
+    background-color: var(--space-cadet);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.div{
+    border: 2px solid var(--manatee-secondary);
+    padding: 3rem 4rem;
+    border-radius: var(--radius);
+    background: var(--space-cadet-secondary);
+}
+
+.div_form{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 100%;
+    border-radius: var(--radius);
+    justify-content: space-evenly;
+}
+
+.div_form_item{
+    border: 2px solid var(--manatee);
+    border-radius: var(--radius);
+    height: 2.3rem;
+    background:none;
+    transition: border .2s ease-out;
+    font-family: 'Inter',sans-serif;
+    
+    font-size: 1.1rem;
+    padding: 5px;
+    color: var(--cultured);
+    position: relative;
+}
+
+.div_form_item:hover,
+.div_form_item:active{
+    border: 2px solid var(--manatee-secondary);
+
+}
+
+.div_form_item:focus{
+    outline: none;
+    border: 2px solid var(--cultured);
+}
+
+
+
+
+.div_form_boton{
+    color: var(--manatee-secondary);
+    padding: 11px 16px;
+    font-weight: bold;
+    background: none;
+    border: 2px solid var(--manatee-secondary);
+    border-radius: var(--radius);
+    transition: all 100ms ease-out;
+    font-size: 1rem;
+    display: block;
+    
+}
+
+.div_form_boton:hover,
+.div_form_boton:active{
+    background: var(--manatee-secondary);
+    color: var(--cultured);
+    border-color:var(--space-cadet-secondary);
+    cursor: pointer;
+}
+
+.div_form_boton:active{
+    background: var(--cultured);
+    color: var(--imperial-red);
+    border-color:var(--imperial-red);
+}
+
+
