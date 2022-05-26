@@ -144,12 +144,12 @@ const link = document.querySelector('.link');
 //     console.log(inputTexto.value.substring(e.target.selectionStart,e.target.selectionEnd));
 // });
 
-let paragraph = document.createElement('P');
-let fragmento = document.createDocumentFragment();
-fragmento.appendChild((paragraph));
+// let paragraph = document.createElement('P');
+// let fragmento = document.createDocumentFragment();
+// fragmento.appendChild((paragraph));
 
-window.addEventListener('keypress',(e)=>{
-    paragraph.textContent += e.key;
-});
+// window.addEventListener('keypress',(e)=>{
+//     paragraph.textContent += e.key;
+// });
 
-contenedor1.appendChild(fragmento);
+// contenedor1.appendChild(fragmento);
