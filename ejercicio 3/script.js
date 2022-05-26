@@ -5,6 +5,9 @@ const boton = document.querySelector('.div_form_boton');
 const alumnosInscritos = ['maria','juan bautista','jose','pedro','rodrigo','josefina','paula','estelvina','juan ignacio'];
 const materias = ['psicologia','ciencia','matematicas','programacion','fisica'];
 const contenedorInfo = document.querySelector('.informacion');
+const hdnInput = document.querySelector('.div_form_hdninput');
+let baseDatos = [];
+
 class alumno{
     constructor(nombre,mail,materia){
         this.nombre = nombre;
@@ -16,13 +19,17 @@ class alumno{
         let nombre;
         let mail
         let materia
-        nombre.innerHTML = `Nombre del alumno:<b> ${this.nombre}</b>`;
-        mail.innerHTML = `Email del alumno:<b> ${this.mail}</b>`;
-        materia.innerHTML = `materia`
+        nombre.innerHTML = `Nombre del alumno:<b> ${this.nombre}</b><br>`;
+        mail.innerHTML = `Email del alumno:<b> ${this.mail}</b><br>`;
+        materia.innerHTML = `Materia a aprobar:<b> ${this.materia}</b><br>`;
+        contenedorInfo.appendChild(nombre + mail + materia)
     }
 }
 
-let baseDatos = [];
+const datosHdnInput = (a)=>{
+    hdnInput.value = a;
+}
+
 
 
 
@@ -38,19 +45,22 @@ function checkearDatos(){
 
         if(mailA.includes('@') && mailA.includes('.')){
 
-            if(materiaA.includes(materiaAdeudada)){
-                alumno(nombreA,mailA,materiaA);
+            if(materias.includes(materiaA)){
+
+                alumnoN = new alumno(nombreA,mailA,materiaA);
+                baseDatos.push(alumnoN);
+                datosHdnInput(baseDatos);
             }
 
-            {
+            else if(materias.includes(materiaA) === false){
                 return alert('La materia no existe');
             }
         }
-        {
+        else if((mailA.includes('@') && mailA.includes('.')) === false){
             return alert('El mail es invalido');
         }
     }
-    {
+    else if(alumnosInscritos.includes(nombreA) === false){
         return alert('El nombre no esta ne la lista de inscritos');
     }
 
