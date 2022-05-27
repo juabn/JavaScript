@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.datos{
+    width: 70%;
+    margin: .5rem auto 0;
+    display: grid;
+    grid-auto-flow: column;
+    padding: 5px 10px;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 10px;
+    background: lavender;
+}
+
+.datos_item{
+    border: 2px solid teal;
+    width: fit-content;
+    padding: 15px;
+}
+
