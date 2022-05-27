@@ -6,7 +6,9 @@ const alumnosInscritos = ['maria','juan bautista','jose','pedro','rodrigo','jose
 const materias = ['psicologia','ciencia','matematicas','programacion','fisica'];
 const contenedorInfo = document.querySelector('.informacion');
 const hdnInput = document.querySelector('.div_form_hdninput');
-
+const msjErrores = ['El nombre no es un alumno registrado','El email no es valido','La materia no es valida','Datos enviados correctamente!'];
+let msjError = document.createElement('P');
+msjError.classList.add('p_error');
 
 class alumno{
     constructor(nombre,mail,materia){
@@ -14,7 +16,7 @@ class alumno{
         this.mail = mail;
         this.materia = materia;
     }
-
+    
     mostrarDatos(){
         let nombre;
         let mail
@@ -42,31 +44,40 @@ function checkearDatos(){
     materiaA = materiaA.toLowerCase();
     
     if(alumnosInscritos.includes(nombreA)){
-
+        
         if(mailA.includes('@') && mailA.includes('.')){
-
+            
             if(materias.includes(materiaA)){
-
+                
                 alumnoN = new alumno(nombreA,mailA,materiaA);
                 datosHdnInput(alumnoN);
-                alert('Datos enviados exitosamente!');
+                msjError.innerHTML = msjErrores[3];
+                if(msjError.innerHTML == msjErrores[3]){
+                    msjError.classList.add('p_exito');
+                }
+                return contenedorInfo.appendChild(msjError);
             }
-
             else if(materias.includes(materiaA) === false){
-                return alert('La materia no existe');
+                msjError.innerHTML = msjErrores[2];
+                return contenedorInfo.appendChild(msjError);
             }
         }
         else if((mailA.includes('@') && mailA.includes('.')) === false){
-            return alert('El mail es invalido');
+            msjError.innerHTML = msjErrores[1];
+            return contenedorInfo.appendChild(msjError);
         }
     }
     else if(alumnosInscritos.includes(nombreA) === false){
-        return alert('El nombre no esta en la lista de inscritos');
+        msjError.innerHTML = msjErrores[0];
+        return contenedorInfo.appendChild(msjError);
     }
 
 }
 
 boton.addEventListener('mouseup',checkearDatos);
+boton.addEventListener('click', (e)=>{
+   e.preventDefault();
+});
 
 
 

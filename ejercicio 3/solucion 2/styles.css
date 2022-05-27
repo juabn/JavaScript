@@ -97,4 +97,11 @@ body{
     border-color:var(--imperial-red);
 }
 
+.p_error{
+    color: var(--imperial-red);
+}
 
+.p_exito{
+    color: #6cef25;
+    
+}
