@@ -26,13 +26,17 @@ const alumnos = [{
     materia: 'fisica 1'
 },];
 const containerInfo = document.querySelector('.informacion');
+
 let dataSemana1 = document.createElement('H2');
-dataSemana1.innerHTML = 'Integrantes de mesa semana 1: ';
-dataSemana1 = dataSemana1.innerHTML;
+dataSemana1.classList.add('dataS1');
+dataSemana1.innerHTML = 'Integrantes de mesa semana 1';
+dataSemana1 = dataSemana1.outerHTML;
 let alumnosS1 = '';
+
 let dataSemana2 = document.createElement('H2');
-dataSemana2.innerHTML = 'Integrantes de mesa semana 2: ';
-dataSemana2 = dataSemana2.innerHTML;
+dataSemana2.classList.add('dataS2');
+dataSemana2.innerHTML = 'Integrantes de mesa semana 2';
+dataSemana2 = dataSemana2.outerHTML;
 let alumnosS2 = '';
 
 let semana1 = [];
@@ -58,6 +62,7 @@ for(alumno in alumnos){
 };
 
 boton.addEventListener('click',(e)=>{
+    
     for(alumno in alumnos){
         let datosA = alumnos[alumno];
         let selector = document.querySelector(`.datos_item${alumno}`);
@@ -74,7 +79,7 @@ boton.addEventListener('click',(e)=>{
     alumnosS2 += semana2.toString();
 
     containerInfo.innerHTML = dataSemana1 + alumnosS1 + ' ';
-    containerInfo.innerHTML += dataSemana2 + alumnosS2 + ' ';
+    containerInfo.innerHTML += dataSemana2 + alumnosS2;
 
 })
 
