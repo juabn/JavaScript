@@ -39,12 +39,12 @@
 // console.log(prueba());
 
 
-    try{
-        throw 'pito';
-    }
-    catch(error){
-        console.log(error);
-    }
+    // try{
+    //     throw 'pito';
+    // }
+    // catch(error){
+    //     console.log(error);
+    // }
 
 
 
