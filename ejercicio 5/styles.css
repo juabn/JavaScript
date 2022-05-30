@@ -62,3 +62,8 @@ body{
     cursor: pointer;
     background-color: bisque;
 }
+
+.nota_resultado{
+    margin-top: 1rem;
+    text-align: center;
+}
