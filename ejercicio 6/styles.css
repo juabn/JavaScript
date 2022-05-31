@@ -1,0 +1,47 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.materia_preset{
+    display: flex;
+    width: 50%;
+    background-color: rgb(197, 197, 197);
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.preset{
+    padding: 2rem;
+    border: 2px solid rgb(173, 172, 172);
+}
+
+.materias{
+    width: 70%;
+    margin: 0 auto;
+
+    
+}
+
+.materia{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgb(224, 224, 224);
+    border: 2px solid rgb(148, 148, 148);
+}
+
+
+.materia_item{
+    padding: 1rem .8rem;
+    
+}
+
+
+.materia_nota{
+    background: rgb(148, 148, 148);
+    width: 15%;
+    text-align: center;
+}
