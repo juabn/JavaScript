@@ -20,9 +20,25 @@ const dataAlumno = [{
 },{
     materia: 'Programacion 2',
     nota: '5',
-},];
+},{
+    materia: 'Programacion 3',
+    nota: '9',
+},{
+    materia: 'Sociales 1',
+    nota: '10',
+},{
+    materia: 'Literatura 4',
+    nota: '9',
+},{
+    materia: 'Literatura 5',
+    nota: '6',
+},
+];
+const header = document.querySelector('.header');
 const container = document.querySelector('.materias');
 let divs = document.createDocumentFragment();
+divs.innerHTML = '';
+
 
 const obtenerMateria = (id)=>{
     return new Promise((res,rej)=>{
@@ -36,25 +52,36 @@ const obtenerNota = (id)=>{
     return new Promise((res,rej)=>{
         nota = dataAlumno[id].nota;
         if(dataAlumno[id].nota == undefined) rej('No se ha puesto nota aun');
-        else setTimeout(()=>{res(nota)},Math.random()*1830);
+        else setTimeout(()=>{res(nota)},Math.random()*400);
     })
 };
 
-
+// const insertarDiv = (materiaDiv,notaDiv)=>{
+//     return new Promise((res,rej)=>{
+//         materiaHTML = materiaDiv;
+//         notaHTML = notaDiv;
+//         res(divs.innerHTML += divsHTML);
+//     })
+// }
 
 
 
 const implementarData = async ()=>{
+
+    let materiaHTML;
+    let notaHTML;
+
     for(i = 0; i < dataAlumno.length;i++){
-        await obtenerMateria(i).then((materia)=>{
-            await obtenerNota(i).then((nota=>{
-                console.log(materia + " " + nota);
-            })).catch((e)=>{console.log(e)});
-            
-        }).catch((e)=>{console.log(e)});
+        materiaHTML = await obtenerMateria(i).catch((e)=>console.log(e));
+        notaHTML = await obtenerNota(i).catch((e)=>console.log(e));
+        divs.innerHTML += `<div class="materia">
+        <h2 class="materia_nombre materia_item">${materiaHTML}</h2>
+        <h2 class="materia_nota materia_item">${notaHTML}</h2>
+        </div>`;
     }
-    
+    container.innerHTML += divs.innerHTML;
 }
+
 
 implementarData();
 

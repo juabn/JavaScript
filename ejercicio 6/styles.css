@@ -42,5 +42,6 @@
 
 .materia_nota{
     background: rgb(148, 148, 148);
-    
+    width: 15%;
+    text-align: center;
 }
