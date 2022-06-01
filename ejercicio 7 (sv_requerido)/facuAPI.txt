@@ -1,0 +1,4 @@
+{
+    "aprobados" : "Juan Perez,Maria Jose,Johnatan Wiliams,Josefina Perez,Juan Ignacio,Pepe Morales",
+    "desaprobados" : "Francisco Pontaquarto,Bruno Luciani,Estelvina Rosa,Thiago Nuñez"
+}
