@@ -5,13 +5,19 @@ const ulistD = document.querySelector('.ulistD');
 const contadorA = document.querySelector('.contadorA');
 const contadorD = document.querySelector('.contadorD');
 const boton = document.querySelector('.boton_muestra');
+const error = document.querySelector('.err');
 let aprobados;
 let desaprobados;
 const getInfo = async ()=>{
+    try{
     let request = await fetch('facuAPI.txt');
     let resultado = await request.json();
     aprobados = resultado.aprobados.split(',');
     desaprobados = resultado.desaprobados.split(',');
+    }
+    catch{
+        error.textContent = 'La API no ha sido encontrada';
+    }
 }
 
 const insertInfo = async ()=>{
