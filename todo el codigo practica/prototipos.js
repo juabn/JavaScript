@@ -143,6 +143,8 @@
 
 // validarEdad();
 
+// CLAUSURAS
+
 // const saludar = (nombre)=>{
 //     return function(){
 //         console.log(`hola ${nombre}`);
@@ -153,15 +155,56 @@
 
 // addEventListener('load',saludo);
 
-const cambiarTamanio = tamanio =>{
-    return ()=>{
-        document.querySelector('.texto').style.fontSize = `${tamanio}px`;
-    }
-}
+// const cambiarTamanio = tamanio =>{
+//     return ()=>{
+//         document.querySelector('.texto').style.fontSize = `${tamanio}px`;
+//     }
+// }
 
-let twelvePx = cambiarTamanio('12');
-let fourteenPx = cambiarTamanio('14');
-let sixteenPx = cambiarTamanio('16');
-document.querySelector('.t12').addEventListener('click',twelvePx);
-document.querySelector('.t14').addEventListener('click',fourteenPx);
-document.querySelector('.t16').addEventListener('click',sixteenPx);
+// let twelvePx = cambiarTamanio('12');
+// let fourteenPx = cambiarTamanio('14');
+// let sixteenPx = cambiarTamanio('16');
+// document.querySelector('.t12').addEventListener('click',twelvePx);
+// document.querySelector('.t14').addEventListener('click',fourteenPx);
+// document.querySelector('.t16').addEventListener('click',sixteenPx);
+
+// PARMETRO REST
+
+
+// const sumar = (frase,...num)=>{
+//     let resultado = 0;
+//     for(let i = 0; i<num.length; i++){
+//         resultado += num[i];
+//     }
+//     return console.log(frase + resultado);
+// };
+
+// sumar('hawaii ',1,1,6,10,15,1002,20);
+
+// OPERADOR TERNARIO
+
+// let edad = 12;
+
+// (edad > 18) ? (console.log("es mayor de edad"),
+//             console.log('puede pasar'))
+//             : (console.log('es menor de edad'),
+//             console.log('no puede pasra'));
+
+// OPERADOR SPREAD
+// let arr1 = ['valor 1','valor 2','valor 3'];
+// let arr2 = ['valor 4','valor 5'];
+
+// arr1.push(...arr2);
+
+// CONCAT ARRAYS
+
+// let arr3 = [...arr1,...arr2];
+// console.log(arr3);
+
+// const sumar = (n1,n2)=>{
+//     console.log(n1+n2);
+// }
+
+// let arr = [3,6];
+
+// sumar(...arr);
