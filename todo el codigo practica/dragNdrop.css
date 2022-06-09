@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: #2c2a2a;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 3rem;
+    color: #2c2a2a;
+    text-shadow: 0 0 4px rgba(230, 230, 250, 0.795);
+    background-color: white;
+}
+
+.cuadrado{
+    padding: 100px;
+    background: lavender;
+    margin: 50px auto;
+    width: 30%;
+    outline: 4px dashed rgb(209, 209, 209);
+}
+
+.texturas{
+    width: fit-content;
+    background-color: lavender;
+    display: flex;
+    margin: 2rem auto;
+    justify-content: center;
+    padding: 1rem;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 3px;
+}
+
+.textura-item{
+    border: #2c2a2a 3px solid;
+    border-radius: 5px;
+    margin: 0 10px 0;
+    width: 60px;
+    height: 60px;
+}
+
+.madera{
+    background-image: url(resources/fondo-textura-madera_53876-14865.jpg);
+}
+
+.piedra{
+    background-image: url(resources/textura-de-piedra-5940378.jpg);
+}
+
+.ladrillo{
+    background-image: url(resources/depositphotos_4175487-stock-photo-weathered-stained-old-brick-wall.jpg);
+}
+
+.textura-item:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.circulo{
+    margin: 10px;
+    padding: 100px;
+    border-radius: 50%;
+    background: rgb(250, 105, 105);
+    display: inline-block;
+    border: 2px black solid;
+}
