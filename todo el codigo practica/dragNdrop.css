@@ -1,0 +1,25 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #2c2a2a;
+}
+
+.cuadrado{
+    padding: 100px;
+    background: lavender;
+    margin: 50px;
+    outline: 4px dashed rgb(209, 209, 209);
+}
+
+.circulo{
+    margin: 10px;
+    padding: 100px;
+    border-radius: 50%;
+    background: rgb(250, 105, 105);
+    display: inline-block;
+    border: 2px black solid;
+}
