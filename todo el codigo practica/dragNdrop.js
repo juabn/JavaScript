@@ -44,6 +44,9 @@ const reemplazarTextura = (textura)=>{
         cuadrado.style.background = 'url(resources/depositphotos_4175487-stock-photo-weathered-stained-old-brick-wall.jpg)';
         ladrillo.style.boxShadow = '0 0 5px lavender';
     }
+    else{
+        return 'no es textura';
+    }
 }
 
 madera.addEventListener('dragstart',(e)=>{
