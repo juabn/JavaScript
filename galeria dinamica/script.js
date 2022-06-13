@@ -16,6 +16,7 @@ const insertarImg = (ar)=>{
         reader.addEventListener('load',(e)=>{
             let newImg = document.createElement('IMG');
             newImg.setAttribute('src',e.currentTarget.result);
+            newImg.classList = 'imagenes_item';
             fragment.appendChild(newImg);
             container.appendChild(fragment);
         })
