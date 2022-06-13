@@ -20,7 +20,8 @@ body{
 }
 
 .imagenes_item{
-    max-width: 500px;
+    object-fit: cover;
+    max-width: 300px;
     image-rendering: optimizeSpeed;
     height: 100%;
     border-radius: 5px;
