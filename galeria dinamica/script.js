@@ -2,8 +2,10 @@
 
 const inputFile = document.getElementById('imgreader');
 const container = document.querySelector('.imagenes');
+const dropimg = document.querySelector('.dropimg');
+const body = document.getElementById('body');
 inputFile.addEventListener('change',()=>{
-    insertarImg(inputFile.files);
+    
 
 });
 
@@ -22,3 +24,14 @@ const insertarImg = (ar)=>{
         })
     }
 }
+
+dropimg.addEventListener('dragover',(e)=>{
+    e.preventDefault();
+    console.log('over');
+});
+dropimg.addEventListener('drop',(e)=>{
+    e.preventDefault();
+    console.log(e);
+    insertarImg(e.dataTransfer.files);
+})
+
