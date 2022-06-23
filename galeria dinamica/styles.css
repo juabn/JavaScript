@@ -40,6 +40,7 @@ body{
     transition: all 1s ease-out;
 }
 
+
 .imgreader{
     padding: 5px 10px;
     outline: 2px dashed rgb(36, 36, 36);
@@ -51,7 +52,32 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    
+}
 
+.imgcarga{
+    width: 70%;
+    height: 10px;
+    position: absolute;
+    top: 48%;
+    left: 15%;
+    border: 2px solid rgb(49, 49, 49);
+    overflow: hidden;
+    border-radius: 2px;
+    display: none;
+}
+
+.imgcarga::after{
+    display: block;
+    content: " ";
+    width: 100%;
+    background-color: rgb(200, 255, 174);
+    height: 10px;
+    position: absolute;
+    right: 100%;
+    transform: translate(var(--translado,0));
+    
 }
 
 .labeltxt{
@@ -60,6 +86,7 @@ body{
     font-size: 2rem;
     text-align: center;
     user-select: none;
+    
 }
 
 .imgreader:hover,
