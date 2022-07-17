@@ -24,7 +24,11 @@ const alumnos = [{
     nombre: 'Jose Diaz',
     mail: 'jdiaz@gmail.com',
     materia: 'fisica 1'
-},];
+},{
+    nombre: 'Lucas Aguirre',
+    mail: 'lxgfaytdewmireda@gmail.com',
+    materia: 'psicologia 3'
+}];
 const containerInfo = document.querySelector('.informacion');
 
 let dataSemana1 = document.createElement('H2');
@@ -69,9 +73,11 @@ boton.addEventListener('click',(e)=>{
         let semana = selector.value;
         if(semana == 'semana1'){
             semana1.push((" " + datosA['nombre']));
+            boton.style.display = 'none';
         }
         else if(semana == 'semana2'){
             semana2.push((" " + datosA['nombre']));
+            boton.style.display = 'none';
             
         }
     }

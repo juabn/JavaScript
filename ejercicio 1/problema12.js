@@ -43,7 +43,7 @@ for(i = 0; i < 3; i++){
     div.tabIndex = i;
     let marcaM = marcas[parseInt(Math.floor(Math.random()*4))];
     let modeloM = parseInt(Math.random() * 1000);
-    let precioM = parseInt((Math.random() * 500) + 100.99);
+    let precioM = parseInt((Math.random() * 500) + 100);
     let resHD = parseInt(Math.random() * 2);
     if (resHD == 1){
         resHD = '<h3>Resolución FULL HD</h3>';
